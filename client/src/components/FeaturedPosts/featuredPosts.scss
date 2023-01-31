@@ -1,0 +1,121 @@
+@use "../../sass/breakpoints.scss" as *;
+
+.featured-posts {
+    &__intro {
+        background-color: var(--gray-600);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: var(--space-3xl) var(--space-md) 16rem;
+
+        p {
+            max-width: 650px;
+
+            @include breakpoint(tablet) {
+                font-size: var(--text-md);
+            }
+        }
+
+        h2 {
+            @include breakpoint(tablet) {
+                font-size: var(--text-2xl);
+            }
+
+            @include breakpoint(phone) {
+                font-size: calc(var(--text-2xl) - 0.75rem);
+                margin-bottom: var(--space-md);
+            }
+        }
+    }
+
+    &__intro-decoration {
+        display: flex;
+        align-items: center;
+        gap: var(--space-sm);
+
+        img[alt="jewel icon"] {
+            width: 30px;
+        }
+
+        img {
+            width: 20px;
+        }
+    }
+
+    &__decoration-line {
+        height: 1.5px;
+        background-color: var(--beige-500);
+        width: 200px;
+
+        @include breakpoint(tablet) {
+            width: 140px;
+        }
+
+        @include breakpoint(phone) {
+            width: 100px;
+        }
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 600px 500px;
+        gap: var(--space-xl);
+        padding: 0 var(--space-md);
+        max-width: 1400px;
+        margin: -12rem auto 0;
+
+        @include breakpoint(tablet) {
+            grid-template-rows: 600px;
+        }
+    }
+
+    &__main-feature {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        grid-column: 1 / 3;
+        background-color: var(--gray-700);
+        padding: var(--space-2xl);
+
+        @include breakpoint(tablet) {
+            padding: var(--space-xl);
+        }
+
+        h3 {
+            @include breakpoint(tablet) {
+                font-size: calc(var(--text-2xl) - 0.75rem);
+            }
+        }
+
+        p {
+            max-width: 600px;
+        }
+    }
+
+    &__featured {
+        @include breakpoint(tablet) {
+            grid-column: 1 / 3;
+        }
+
+        p {
+            max-width: 600px;
+        }
+    }
+
+    &__featured-image {
+        height: 300px;
+        background-color: var(--gray-700);
+        padding: var(--space-xl);
+        display: flex;
+        align-items: flex-end;
+    }
+
+    &__tag-list {
+        display: flex;
+        align-items: center;
+        gap: var(--space-md);
+        flex-wrap: wrap;
+    }
+}

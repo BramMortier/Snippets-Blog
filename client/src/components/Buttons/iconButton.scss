@@ -1,0 +1,17 @@
+.icon-btn {
+    border: none;
+    outline: none;
+    background-color: var(--orange-700);
+    padding: var(--space-xs);
+    border-radius: 100%;
+    transition: all ease 0.3s;
+
+    &:hover {
+        cursor: pointer;
+        background-color: var(--orange-800);
+    }
+
+    img {
+        height: 25px;
+    }
+}
