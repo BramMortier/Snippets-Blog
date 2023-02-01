@@ -1,11 +1,12 @@
 import React from "react";
-import { Header, FeaturedPosts } from "../../components";
+import { Header, FeaturedPosts, Footer } from "../../components";
 
 const LandingPage = () => {
     return (
         <React.Fragment>
             <Header />
             <FeaturedPosts />
+            <Footer />
         </React.Fragment>
     );
 };

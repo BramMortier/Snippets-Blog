@@ -47,7 +47,7 @@ const FeaturedPosts = () => {
                     <p className="text-subtle mb-xs">
                         Welcome to my blog. Here you will find a collection of articles containing snippets about things I learned as a developer.
                     </p>
-                    <span className="text-subtle black">January 6, 2023</span>
+                    <span className="black">January 6, 2023</span>
                 </li>
                 <li className="featured-posts__featured">
                     <div className="featured-posts__featured-image mb-lg">
@@ -60,7 +60,7 @@ const FeaturedPosts = () => {
                         There is a lot of variety, you'll find guides about programming topics, handy tools u can use and my opinion about lots of
                         topics.
                     </p>
-                    <span className="text-subtle black">January 6, 2023</span>
+                    <span className="black">January 6, 2023</span>
                 </li>
             </ul>
         </section>

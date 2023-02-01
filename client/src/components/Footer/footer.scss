@@ -1,0 +1,63 @@
+@use "../../sass/breakpoints.scss" as *;
+
+.footer {
+    background-color: var(--gray-600);
+    padding-block: var(--space-3xl);
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding-inline: var(--space-3xl);
+
+        @include breakpoint(tablet) {
+            flex-direction: column;
+            gap: var(--space-2xl);
+            padding-inline: var(--space-md);
+        }
+    }
+
+    &__quote {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        p {
+            max-width: 400px;
+        }
+    }
+
+    &__logo img {
+        height: 40px;
+    }
+
+    &__links-list {
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: var(--space-4xl);
+        row-gap: var(--space-xs);
+
+        @include breakpoint(tablet) {
+            column-gap: var(--space-lg);
+        }
+    }
+
+    &__links-list-item {
+        span {
+            transition: all ease 0.3s;
+
+            &:hover {
+                color: var(--beige-500);
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__socials-list {
+        display: flex;
+        gap: var(--space-md);
+        align-items: center;
+    }
+}

@@ -1,6 +1,8 @@
 @use "../../sass/breakpoints.scss" as *;
 
 .featured-posts {
+    margin-bottom: var(--space-4xl);
+
     &__intro {
         background-color: var(--gray-600);
         display: flex;
@@ -35,7 +37,7 @@
         gap: var(--space-sm);
 
         img[alt="jewel icon"] {
-            width: 30px;
+            width: 40px;
         }
 
         img {
@@ -44,7 +46,7 @@
     }
 
     &__decoration-line {
-        height: 1.5px;
+        height: 2px;
         background-color: var(--beige-500);
         width: 200px;
 
@@ -62,11 +64,12 @@
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: 600px 500px;
         gap: var(--space-xl);
-        padding: 0 var(--space-md);
+        padding: 0 var(--space-3xl);
         max-width: 1400px;
-        margin: -12rem auto 0;
+        margin: -10rem auto 0;
 
         @include breakpoint(tablet) {
+            padding: 0 var(--space-md);
             grid-template-rows: 600px;
         }
     }

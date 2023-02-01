@@ -92,3 +92,11 @@ h6,
 .uppercase {
     text-transform: uppercase;
 }
+
+.body-font {
+    font-family: var(--body-font);
+}
+
+.heading-font {
+    font-family: var(--heading-font);
+}

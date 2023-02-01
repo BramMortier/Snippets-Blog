@@ -2,6 +2,6 @@
     color: var(--beige-500);
     border-radius: 2rem;
     background-color: var(--orange-700);
-    padding: var(--space-xs) var(--space-3xl);
+    padding: var(--space-xs) var(--space-3xl) calc(var(--space-xs) - 2px);
     width: fit-content;
 }
