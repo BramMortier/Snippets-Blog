@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { IconButton } from "..";
+import { IconButton } from "../../../components";
 import "./header.scss";
 
 const Header = () => {

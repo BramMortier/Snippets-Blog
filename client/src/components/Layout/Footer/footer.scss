@@ -1,4 +1,4 @@
-@use "../../sass/breakpoints.scss" as *;
+@use "../../../sass/breakpoints.scss" as *;
 
 .footer {
     background-color: var(--gray-600);
@@ -57,7 +57,7 @@
 
     &__socials-list {
         display: flex;
-        gap: var(--space-md);
+        gap: var(--space-lg);
         align-items: center;
     }
 }

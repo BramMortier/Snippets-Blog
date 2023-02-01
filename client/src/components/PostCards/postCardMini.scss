@@ -1,0 +1,28 @@
+.postcard-mini {
+    width: 250px;
+    transition: all ease 0.2s;
+
+    &:hover {
+        cursor: pointer;
+        transform: translateY(-0.25rem);
+    }
+
+    &__image {
+        position: relative;
+        padding: var(--space-md);
+        display: flex;
+        align-items: flex-end;
+        gap: var(--space-md);
+        height: 150px;
+        background-color: var(--gray-600);
+
+        &::after {
+            position: absolute;
+            content: "";
+            bottom: 0px;
+            right: 0;
+            border-bottom: 25px solid var(--orange-700);
+            border-left: 25px solid transparent;
+        }
+    }
+}

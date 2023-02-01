@@ -1,0 +1,11 @@
+.admin-header {
+    background-color: var(--gray-700);
+    height: 40px;
+    padding: 0 var(--space-md);
+    display: flex;
+    align-items: center;
+
+    &__logo img {
+        height: 20px;
+    }
+}

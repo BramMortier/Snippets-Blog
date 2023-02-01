@@ -1,5 +1,6 @@
-import Dashboard from "./Dashboard/Dashboard";
+import OverviewPage from "./OverviewPage/OverviewPage";
 import LandingPage from "./LandingPage/LandingPage";
-import PostDetails from "./PostDetails/PostDetails";
+import PostDetailsPage from "./PostDetailsPage/PostDetailsPage";
+import PostEditorPage from "./PostEditorPage/PostEditorPage";
 
-export { Dashboard, LandingPage, PostDetails };
+export { OverviewPage, LandingPage, PostDetailsPage, PostEditorPage };

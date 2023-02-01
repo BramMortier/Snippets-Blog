@@ -1,12 +1,12 @@
 import React from "react";
-import { Header, FeaturedPosts, Footer } from "../../components";
+import { FeaturedPosts } from "../../components";
+
+import "./landingPage.scss";
 
 const LandingPage = () => {
     return (
         <React.Fragment>
-            <Header />
             <FeaturedPosts />
-            <Footer />
         </React.Fragment>
     );
 };

@@ -1,5 +1,6 @@
 import React from "react";
-import { IconButton } from "../../components";
+import { IconButton } from "../../../components";
+
 import "./footer.scss";
 
 const footerLinks = [

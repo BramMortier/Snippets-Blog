@@ -1,0 +1,64 @@
+.sidebar {
+    background-color: var(--gray-600);
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__tabs {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__tab {
+        padding: var(--space-2xs) var(--space-xl);
+        position: relative;
+
+        a {
+            transition: all ease 0.2s;
+            color: var(--beige-500);
+        }
+
+        &:hover {
+            cursor: pointer;
+
+            a {
+                color: var(--orange-700);
+            }
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 5px;
+            background-color: var(--orange-700);
+            transition: all ease 0.3s;
+            opacity: 0;
+        }
+
+        &--active {
+            a {
+                color: var(--orange-700);
+            }
+
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__exit {
+        padding: var(--space-2xs) var(--space-xl);
+        position: relative;
+        transition: all ease 0.2s;
+        color: var(--beige-500);
+
+        &:hover {
+            cursor: pointer;
+            color: var(--orange-700);
+        }
+    }
+}
