@@ -1,0 +1,16 @@
+.button {
+    border: none;
+    outline: none;
+    color: var(--beige-500);
+    border-radius: 2rem;
+    background-color: var(--orange-700);
+    padding: var(--space-sm) var(--space-3xl) calc(var(--space-sm) - 2px);
+    transition: all ease 0.3s;
+    font-size: var(--text-md);
+    width: fit-content;
+
+    &:hover {
+        cursor: pointer;
+        background-color: var(--orange-800);
+    }
+}

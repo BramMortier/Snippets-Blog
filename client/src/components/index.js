@@ -1,10 +1,20 @@
-import AdminHeader from "./AdminHeader/AdminHeader";
-import IconButton from "./Buttons/IconButton";
-import Tag from "./Buttons/Tag";
-import FeaturedPosts from "./FeaturedPosts/FeaturedPosts";
-import PostsOverview from "./PostsOverview/PostsOverview";
-import TopicOverview from "./TopicOverview/TopicsOverview";
-import PostCardMini from "./PostCards/PostCardMini";
+// common components
+import IconButton from "./Common/Buttons/IconButton";
+import Button from "./Common/Buttons/Button";
+import Tag from "./Common/Buttons/Tag";
+import PostCardMini from "./Common/PostCards/PostCardMini";
+import FormInput from "./Common/FormElements/FormInput.jsx/FormInput";
+
+// blog components
+import FeaturedPosts from "./Blog/FeaturedPosts/FeaturedPosts";
+
+// dashboard components
+import AdminHeader from "./Dashboard/AdminHeader/AdminHeader";
+import PostsOverview from "./Dashboard/PostsOverview/PostsOverview";
+import TopicOverview from "./Dashboard/TopicOverview/TopicsOverview";
+import BuilderTools from "./Dashboard/BuilderTools/BuilderTools";
+import PostBlocks from "./Dashboard/PostBlocks/PostBlocks";
+import SectionDivider from "./Dashboard/SectionDivider/SectionDivider";
 
 // admin & blog templates for router
 import BlogLayout from "./Layout/BlogLayout/BlogLayout";
@@ -20,6 +30,7 @@ export {
     Footer,
     Sidebar,
     IconButton,
+    Button,
     FeaturedPosts,
     PostsOverview,
     TopicOverview,
@@ -28,4 +39,8 @@ export {
     AdminHeader,
     BlogLayout,
     DashboardLayout,
+    PostBlocks,
+    BuilderTools,
+    FormInput,
+    SectionDivider,
 };

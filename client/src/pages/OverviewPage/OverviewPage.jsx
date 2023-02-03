@@ -5,7 +5,7 @@ import "./overviewPage.scss";
 
 const OverviewPage = () => {
     return (
-        <div>
+        <div className="overview">
             <PostsOverview />
             <TopicOverview />
         </div>

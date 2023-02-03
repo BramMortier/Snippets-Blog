@@ -1,5 +1,5 @@
 import React from "react";
-import { IconButton } from "../../components";
+import { IconButton } from "../../../components";
 import "./postCardMini.scss";
 
 const PostCardMini = () => {

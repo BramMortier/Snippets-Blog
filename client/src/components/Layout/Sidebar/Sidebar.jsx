@@ -1,19 +1,26 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import "./sidebar.scss";
 
 const Sidebar = () => {
+    const location = useLocation();
+    const [activeTab, setActiveTab] = useState("/admin");
+
+    useEffect(() => {
+        setActiveTab(location.pathname);
+    }, [location.pathname]);
+
     return (
         <aside className="sidebar">
             <ul className="sidebar__tabs">
-                <li className="sidebar__tab sidebar__tab--active ">
+                <li className={`sidebar__tab ${activeTab === "/admin" ? "sidebar__tab--active" : ""}`}>
                     <Link to="/admin">Dashboard</Link>
                 </li>
-                <li className="sidebar__tab">
+                <li className={`sidebar__tab ${activeTab === "/admin/editor" ? "sidebar__tab--active" : ""}`}>
                     <Link to="/admin/editor">New Post</Link>
                 </li>
-                <li className="sidebar__tab">
-                    <Link to="/admin">Manage Roles</Link>
+                <li className={`sidebar__tab ${activeTab === "/admin/roles" ? "sidebar__tab--active" : ""}`}>
+                    <Link to="/admin/roles">Manage Roles</Link>
                 </li>
             </ul>
             <Link to="/" className="sidebar__exit">

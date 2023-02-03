@@ -12,7 +12,8 @@
     --text-3xl: 3.75rem;
 }
 
-body {
+body,
+input {
     font-family: var(--body-font);
     font-size: var(--text-md);
     color: var(--gray-600);
@@ -75,6 +76,11 @@ h6,
 
 .text-subtle {
     color: var(--gray-400);
+}
+
+.text-error {
+    font-size: var(--text-sm);
+    color: var(--orange-700);
 }
 
 .bold {

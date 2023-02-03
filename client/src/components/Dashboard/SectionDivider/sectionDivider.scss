@@ -1,11 +1,6 @@
-.post-editor {
-    padding: var(--space-2xl);
-    background-color: var(--gray-100);
-
-    &__cta {
+.section-divider {
+    &__name {
         display: flex;
-        align-items: center;
-        justify-content: space-between;
     }
 
     &__divider {
@@ -18,7 +13,7 @@
         }
     }
 
-    &__divider-line {
+    &__line {
         background-color: var(--gray-600);
         height: 2px;
         width: 100%;

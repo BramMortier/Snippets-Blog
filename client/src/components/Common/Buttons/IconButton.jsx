@@ -1,4 +1,5 @@
 import React from "react";
+
 import "./iconButton.scss";
 
 const IconButton = ({ src, alt }) => {
