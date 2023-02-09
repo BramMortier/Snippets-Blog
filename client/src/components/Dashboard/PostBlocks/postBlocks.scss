@@ -1,0 +1,18 @@
+.post-blocks {
+    width: 600px;
+
+    &__empty-placeholder {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 600px;
+        border: 2px dashed var(--gray-300);
+
+        p {
+            color: var(--gray-400);
+            max-width: 300px;
+            text-align: center;
+        }
+    }
+}

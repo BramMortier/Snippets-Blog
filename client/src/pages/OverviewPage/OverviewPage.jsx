@@ -5,10 +5,10 @@ import "./overviewPage.scss";
 
 const OverviewPage = () => {
     return (
-        <div className="overview">
+        <section className="overview-page">
             <PostsOverview />
             <TopicOverview />
-        </div>
+        </section>
     );
 };
 

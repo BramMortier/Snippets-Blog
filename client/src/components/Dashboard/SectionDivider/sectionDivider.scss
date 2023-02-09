@@ -1,6 +1,9 @@
 .section-divider {
     &__name {
         display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: var(--space-sm);
     }
 
     &__divider {

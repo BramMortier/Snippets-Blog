@@ -8,10 +8,10 @@ const DashboardLayout = () => {
     return (
         <React.Fragment>
             <AdminHeader />
-            <div className="dashboard">
+            <main className="dashboard">
                 <Sidebar />
                 <Outlet />
-            </div>
+            </main>
         </React.Fragment>
     );
 };

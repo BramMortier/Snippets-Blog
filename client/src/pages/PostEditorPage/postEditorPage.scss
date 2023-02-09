@@ -1,26 +1,9 @@
-.post-editor {
+.post-editor-page {
     padding: var(--space-2xl);
     background-color: var(--gray-100);
 
-    &__cta {
+    &__main {
         display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    &__divider {
-        display: flex;
-        gap: var(--space-sm);
-        align-items: center;
-
-        img {
-            width: 16px;
-        }
-    }
-
-    &__divider-line {
-        background-color: var(--gray-600);
-        height: 2px;
-        width: 100%;
+        gap: var(--space-4xl);
     }
 }
