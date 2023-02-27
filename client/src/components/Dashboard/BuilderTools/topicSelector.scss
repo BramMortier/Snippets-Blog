@@ -1,0 +1,14 @@
+.topic-selector {
+    &__topic-list {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-2xs);
+        margin-top: var(--space-sm);
+    }
+
+    &__topic {
+        display: flex;
+        gap: var(--space-md);
+        align-items: center;
+    }
+}

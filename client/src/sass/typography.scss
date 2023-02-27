@@ -13,7 +13,8 @@
 }
 
 body,
-input {
+input,
+textarea {
     font-family: var(--body-font);
     font-size: var(--text-md);
     color: var(--gray-600);

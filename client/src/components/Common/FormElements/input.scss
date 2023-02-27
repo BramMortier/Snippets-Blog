@@ -1,0 +1,21 @@
+.input {
+    width: 100%;
+    outline: none;
+    border: 1px solid var(--gray-300);
+    background-color: var(--white);
+    padding: var(--space-xs) var(--space-md) calc(var(--space-xs) - 2px);
+    transition: all ease 0.3s;
+
+    &::placeholder {
+        color: var(--gray-300);
+        font-family: var(--body-font);
+    }
+
+    &:focus {
+        border: 1px solid var(--gray-700);
+    }
+
+    &[type="checkbox"] {
+        width: initial;
+    }
+}

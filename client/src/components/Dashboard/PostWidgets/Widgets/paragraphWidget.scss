@@ -1,8 +1,8 @@
-.form-input {
+.paragraph-widget {
     width: 600px;
     margin-bottom: var(--space-md);
 
-    &__header {
+    &__top {
         display: flex;
         justify-content: space-between;
         margin-bottom: var(--space-2xs);
@@ -17,19 +17,6 @@
         display: flex;
         gap: var(--space-sm);
         align-items: flex-start;
-
-        input {
-            width: 100%;
-            outline: none;
-            border: 1px solid var(--gray-300);
-            background-color: var(--white);
-            padding: var(--space-xs) var(--space-md) calc(var(--space-xs) - 2px);
-
-            &::placeholder {
-                color: var(--gray-300);
-                font-family: var(--body-font);
-            }
-        }
 
         img {
             width: 12px;

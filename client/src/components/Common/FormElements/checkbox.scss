@@ -1,0 +1,30 @@
+.checkbox {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    input[type="checkbox"] {
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        background-color: var(--white);
+        border: 1px solid var(--gray-300);
+        cursor: pointer;
+    }
+
+    &__checkmark {
+        width: 20px;
+        height: 20px;
+        padding: 3px;
+        position: absolute;
+        background-color: var(--orange-700);
+        opacity: 0;
+        pointer-events: none;
+        transition: all ease 0.3s;
+
+        &--active {
+            opacity: 1;
+        }
+    }
+}
