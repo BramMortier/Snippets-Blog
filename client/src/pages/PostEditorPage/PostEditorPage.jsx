@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { PostWidgets, BuilderTools, SectionDivider, Button } from "../../components";
+import axios from "axios";
 
 import "./postEditorPage.scss";
 
@@ -24,9 +25,16 @@ const PostEditorPage = () => {
         topics: [],
     });
 
-    const handlePostSubmit = (e) => {
+    const handlePostSubmit = async (e) => {
         e.preventDefault();
         console.log(postData);
+
+        try {
+            const res = await axios.post("http://localhost:3000/api/posts", postData);
+            console.log(res.data);
+        } catch (err) {
+            console.log(err.response.data);
+        }
     };
 
     return (

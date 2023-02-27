@@ -1,5 +1,8 @@
+const postServices = require("../services/postServices.js");
+
 const getAllPosts = async (req, res) => {
-    res.send({ message: "GET all posts" });
+    const allPosts = await postServices.getAllPosts();
+    res.status(200).send({ status: "OK", data: allPosts });
 };
 
 const getOnePost = async (req, res) => {
@@ -7,7 +10,17 @@ const getOnePost = async (req, res) => {
 };
 
 const createNewPost = async (req, res) => {
-    res.send({ message: "CREATE a new post" });
+    const { body } = req;
+
+    const newPost = {
+        title: body.title,
+        author: body.author,
+        body: body.body,
+        topics: body.topics,
+    };
+
+    const createdPost = await postServices.createNewPost(newPost);
+    res.status(201).send({ status: "OK", data: createdPost });
 };
 
 const deletePost = async (req, res) => {

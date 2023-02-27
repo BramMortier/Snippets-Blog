@@ -11,22 +11,20 @@ const postSchema = new Schema(
             type: String,
             required: true,
         },
-        body: {
-            type: [
-                {
-                    element: String,
-                    content: String,
+        body: [
+            {
+                type: {
+                    type: String,
+                    required: true,
                 },
-            ],
-            required: true,
-        },
+                content: {
+                    type: String,
+                    required: true,
+                },
+            },
+        ],
         topics: {
-            type: [
-                {
-                    type: Schema.Types.ObjectId,
-                    ref: "Topic",
-                },
-            ],
+            type: [String],
             required: true,
         },
     },
