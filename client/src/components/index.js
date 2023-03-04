@@ -2,6 +2,7 @@
 import IconButton from "./Common/Buttons/IconButton";
 import Button from "./Common/Buttons/Button";
 import Tag from "./Common/Buttons/Tag";
+import Modal from "./Common/Modal/Modal";
 import PostCardMini from "./Common/PostCards/PostCardMini";
 
 // form components
@@ -21,6 +22,7 @@ import WidgetSelector from "./Dashboard/BuilderTools/WidgetSelector";
 import TopicSelector from "./Dashboard/BuilderTools/TopicSelector";
 import PostWidgets from "./Dashboard/PostWidgets/PostWidgets";
 import SectionDivider from "./Dashboard/SectionDivider/SectionDivider";
+import AddTopicForm from "./Dashboard/AddTopicForm/AddTopicForm";
 
 // widgets
 import HeadingWidget from "./Dashboard/PostWidgets/Widgets/HeadingWidget";
@@ -65,4 +67,6 @@ export {
     Checkbox,
     Input,
     Textarea,
+    Modal,
+    AddTopicForm,
 };

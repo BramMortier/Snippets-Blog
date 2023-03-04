@@ -19,46 +19,15 @@ const PostWidgets = ({ postData, setPostData }) => {
     const renderPostWidget = (postWidget, index) => {
         switch (postWidget.type) {
             case "Title":
-                return (
-                    <TitleWidget
-                        key={index}
-                        type="text"
-                        placeholder={`Write your ${postWidget.type.toLowerCase()}...`}
-                        label={postWidget.type}
-                        onChange={(e) => handleContentUpdate(index, e)}
-                    />
-                );
+                return <TitleWidget key={index} onChange={(e) => handleContentUpdate(index, e)} />;
             case "Heading":
-                return (
-                    <HeadingWidget
-                        key={index}
-                        type="text"
-                        placeholder={`Write your ${postWidget.type.toLowerCase()}...`}
-                        label={postWidget.type}
-                        onChange={(e) => handleContentUpdate(index, e)}
-                    />
-                );
+                return <HeadingWidget key={index} onChange={(e) => handleContentUpdate(index, e)} />;
             case "Subheading":
-                return (
-                    <SubHeadingWidget
-                        key={index}
-                        type="text"
-                        placeholder={`Write your ${postWidget.type.toLowerCase()}...`}
-                        label={postWidget.type}
-                        onChange={(e) => handleContentUpdate(index, e)}
-                    />
-                );
+                return <SubHeadingWidget key={index} onChange={(e) => handleContentUpdate(index, e)} />;
             case "Image":
                 return <ImageWidget />;
             default:
-                return (
-                    <ParagraphWidget
-                        key={index}
-                        placeholder={`Write your ${postWidget.type.toLowerCase()}...`}
-                        label={postWidget.type}
-                        onChange={(e) => handleContentUpdate(index, e)}
-                    />
-                );
+                return <ParagraphWidget key={index} onChange={(e) => handleContentUpdate(index, e)} />;
         }
     };
 

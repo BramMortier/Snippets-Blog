@@ -13,4 +13,14 @@
         cursor: pointer;
         background-color: var(--orange-800);
     }
+
+    &--secondary {
+        background-color: var(--gray-200);
+        color: var(--gray-400);
+
+        &:hover {
+            cursor: pointer;
+            background-color: var(--gray-250);
+        }
+    }
 }

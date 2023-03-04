@@ -3,15 +3,15 @@ import { Textarea } from "../../../../components";
 
 import "./paragraphWidget.scss";
 
-const ParagraphWidget = ({ value, label, onChange, error, placeholder }) => {
+const ParagraphWidget = ({ value, onChange, error }) => {
     return (
         <section className="paragraph-widget">
             <div className="paragraph-widget__top">
-                <label className="black">{label}</label>
+                <label className="black">Paragraph</label>
                 {error && <span className="text-error">{error}</span>}
             </div>
             <div className="paragraph-widget__body">
-                <Textarea value={value} onChange={onChange} placeholder={placeholder}></Textarea>
+                <Textarea value={value} onChange={onChange} placeholder="Write your paragraph..."></Textarea>
                 <img src="/images/drag-icon.svg" alt="drag icon" />
             </div>
         </section>

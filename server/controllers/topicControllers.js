@@ -1,5 +1,8 @@
+const topicServices = require("../services/topicServices");
+
 const getAllTopics = async (req, res) => {
-    res.send({ message: "GET all topics" });
+    const allTopics = await topicServices.getAllTopics();
+    res.send({ status: "OK", data: allTopics });
 };
 
 const getOneTopic = async (req, res) => {
@@ -7,7 +10,18 @@ const getOneTopic = async (req, res) => {
 };
 
 const createNewTopic = async (req, res) => {
-    res.send({ message: "CREATE a new topic" });
+    const { body } = req;
+
+    const newTopic = {
+        name: body.name,
+    };
+
+    try {
+        const createdTopic = await topicServices.createNewTopic(newTopic);
+        res.status(201).send({ status: "OK", data: createdTopic });
+    } catch (err) {
+        res.status(500).send({ status: "FAILED", data: err.message });
+    }
 };
 
 const deleteTopic = async (req, res) => {

@@ -23,7 +23,13 @@ const postRules = [
     body("topics").isArray({ min: 1 }).withMessage("At least one topic is required"),
 ];
 
+const topicRules = [
+    body("name").isLength({ max: 20 }).withMessage("Tag can't exceed 20 chars"),
+    body("name").notEmpty().withMessage("Tag can't be empty"),
+];
+
 module.exports = {
     validate,
     postRules,
+    topicRules,
 };
