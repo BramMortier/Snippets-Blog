@@ -1,19 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { PostCardMini, SectionDivider } from "../../../components";
-import axios from "axios";
+import { usePostContext } from "../../../hooks/usePostContext";
+
 import "./postsOverview.scss";
 
 const PostsOverview = () => {
-    const [posts, setPosts] = useState([]);
-
-    useEffect(() => {
-        const fetchPosts = async () => {
-            const res = await axios.get("http://localhost:3000/api/posts");
-            const { data } = res.data;
-            setPosts(data);
-        };
-        fetchPosts();
-    }, []);
+    const { posts } = usePostContext();
 
     return (
         <section className="posts-overview">
