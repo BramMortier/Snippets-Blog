@@ -23,10 +23,13 @@ const postSchema = new Schema(
                 },
             },
         ],
-        topics: {
-            type: [String],
-            required: true,
-        },
+        topics: [
+            {
+                type: Schema.Types.ObjectId,
+                ref: "Topic",
+                required: true,
+            },
+        ],
     },
     {
         timestamps: true,

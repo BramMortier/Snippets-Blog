@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import { PostWidgets, BuilderTools, SectionDivider, Button } from "../../components";
+import { usePostContext } from "../../hooks/usePostContext";
+import { createPost } from "../../context/PostContext";
 import axios from "axios";
 
 import "./postEditorPage.scss";
 
 const PostEditorPage = () => {
+    const { dispatch } = usePostContext();
     const [postData, setPostData] = useState({
         title: "",
         author: "Bram Mortier",
@@ -31,7 +34,9 @@ const PostEditorPage = () => {
 
         try {
             const res = await axios.post("http://localhost:3000/api/posts", postData);
-            console.log(res.data);
+            const { data } = res.data;
+            dispatch(createPost(data));
+            console.log(res);
         } catch (err) {
             console.log(err.response.data);
         }

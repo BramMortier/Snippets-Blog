@@ -1,5 +1,5 @@
 import React from "react";
-import { FeaturedPosts } from "../../components";
+import { FeaturedPosts, PostsList } from "../../components";
 
 import "./landingPage.scss";
 
@@ -7,6 +7,7 @@ const LandingPage = () => {
     return (
         <React.Fragment>
             <FeaturedPosts />
+            <PostsList />
         </React.Fragment>
     );
 };

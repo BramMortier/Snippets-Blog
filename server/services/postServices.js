@@ -1,7 +1,7 @@
 const Post = require("../models/postModel");
 
 const getAllPosts = async () => {
-    const allPosts = await Post.find();
+    const allPosts = await Post.find().populate("topics");
     return allPosts;
 };
 

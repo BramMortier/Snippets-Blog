@@ -1,5 +1,5 @@
-import axios from "axios";
 import React, { createContext, useReducer, useEffect } from "react";
+import axios from "axios";
 
 export const PostContext = createContext();
 

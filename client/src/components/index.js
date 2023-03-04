@@ -3,7 +3,11 @@ import IconButton from "./Common/Buttons/IconButton";
 import Button from "./Common/Buttons/Button";
 import Tag from "./Common/Buttons/Tag";
 import Modal from "./Common/Modal/Modal";
+
 import PostCardMini from "./Common/PostCards/PostCardMini";
+import PostCardMedium from "./Common/PostCards/PostCardMedium";
+import PostCardLarge from "./Common/PostCards/PostCardLarge";
+import PostCardFeatured from "./Common/PostCards/PostCardFeatured";
 
 // form components
 import Input from "./Common/FormElements/Input";
@@ -12,6 +16,7 @@ import Checkbox from "./Common/FormElements/Checkbox";
 
 // blog components
 import FeaturedPosts from "./Blog/FeaturedPosts/FeaturedPosts";
+import PostsList from "./Blog/PostsList/PostsList";
 
 // dashboard components
 import AdminHeader from "./Dashboard/AdminHeader/AdminHeader";
@@ -50,6 +55,9 @@ export {
     PostsOverview,
     TopicOverview,
     PostCardMini,
+    PostCardMedium,
+    PostCardLarge,
+    PostCardFeatured,
     Tag,
     AdminHeader,
     BlogLayout,
@@ -69,4 +77,5 @@ export {
     Textarea,
     Modal,
     AddTopicForm,
+    PostsList,
 };

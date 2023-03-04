@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import { PostsOverview, TopicOverview, Modal, AddTopicForm } from "../../components";
+import { createTopic } from "../../context/TopicContext";
+import { useTopicContext } from "../../hooks/useTopicContext";
 import axios from "axios";
 
 import "./overviewPage.scss";
 
 const OverviewPage = () => {
+    const { dispatch } = useTopicContext();
     const [addTopicModal, setAddTopicModal] = useState();
     const [topicData, setTopicData] = useState({ name: "" });
 
@@ -13,12 +16,11 @@ const OverviewPage = () => {
 
         try {
             const res = await axios.post("http://localhost:3000/api/topics", topicData);
-            console.log(res.data);
+            const { data } = res.data;
+            dispatch(createTopic(data));
         } catch (err) {
             console.log(err.response.data);
         }
-
-        return;
     };
 
     return (

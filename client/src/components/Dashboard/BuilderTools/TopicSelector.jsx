@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import { Checkbox, Input } from "../../../components";
+import { useTopicContext } from "../../../hooks/useTopicContext";
 
 import "./topicSelector.scss";
 
 const TopicSelector = ({ postData, setPostData }) => {
+    const { topics } = useTopicContext();
     const [searchTerm, setSearchTerm] = useState("");
-    const [topics, setTopics] = useState(["MERN", "Express", "Javascript", "PHP", "MongoDB", "NodeJS"]);
 
     const filteredTopics = topics.filter((topic) => {
-        return topic.toLowerCase().includes(searchTerm.toLowerCase());
+        return topic.name.toLowerCase().includes(searchTerm.toLowerCase());
     });
 
     const handleTopicChange = (e, currentTopic) => {
@@ -34,13 +35,13 @@ const TopicSelector = ({ postData, setPostData }) => {
                 <ul className="topic-selector__topic-list">
                     {filteredTopics.slice(0, 6).map((topic, index) => (
                         <li className="topic-selector__topic" key={index}>
-                            <Checkbox checked={postData.topics.includes(topic)} onChange={(e) => handleTopicChange(e, topic)} />
-                            <span>{topic}</span>
+                            <Checkbox checked={postData.topics.includes(topic._id)} onChange={(e) => handleTopicChange(e, topic._id)} />
+                            <span>{topic.name}</span>
                         </li>
                     ))}
                 </ul>
             ) : (
-                <span>No matching topics</span>
+                <div>No matching topics</div>
             )}
         </div>
     );

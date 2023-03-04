@@ -1,20 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Tag, SectionDivider, Button } from "../../../components";
-import axios from "axios";
+import { useTopicContext } from "../../../hooks/useTopicContext";
 
 import "./topicsOverview.scss";
 
 const TopicOverview = ({ setAddTopicModal }) => {
-    const [topics, setTopics] = useState([]);
-
-    useEffect(() => {
-        const fetchTopics = async () => {
-            const res = await axios.get("http://localhost:3000/api/topics");
-            const { data } = res.data;
-            setTopics(data);
-        };
-        fetchTopics();
-    }, []);
+    const { topics } = useTopicContext();
 
     return (
         <section className="topics-overview">
