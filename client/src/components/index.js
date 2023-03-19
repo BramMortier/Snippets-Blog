@@ -15,8 +15,11 @@ import Textarea from "./Common/FormElements/Textarea";
 import Checkbox from "./Common/FormElements/Checkbox";
 
 // blog components
+import Carousel from "./Blog/Carousel/Carousel";
+import TopicsList from "./Blog/TopicsList/TopicsList";
 import FeaturedPosts from "./Blog/FeaturedPosts/FeaturedPosts";
 import PostsList from "./Blog/PostsList/PostsList";
+import TopicSuggestions from "./Blog/TopicSuggestions/TopicSuggestions";
 
 // dashboard components
 import AdminHeader from "./Dashboard/AdminHeader/AdminHeader";
@@ -50,10 +53,13 @@ export {
     Footer,
     Sidebar,
     IconButton,
+    TopicsList,
     Button,
     FeaturedPosts,
     PostsOverview,
+    TopicSuggestions,
     TopicOverview,
+    Carousel,
     PostCardMini,
     PostCardMedium,
     PostCardLarge,

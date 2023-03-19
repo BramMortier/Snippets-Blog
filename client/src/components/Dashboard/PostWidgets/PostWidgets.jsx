@@ -25,7 +25,7 @@ const PostWidgets = ({ postData, setPostData }) => {
             case "Subheading":
                 return <SubHeadingWidget key={index} onChange={(e) => handleContentUpdate(index, e)} />;
             case "Image":
-                return <ImageWidget />;
+                return <ImageWidget key={index} />;
             default:
                 return <ParagraphWidget key={index} onChange={(e) => handleContentUpdate(index, e)} />;
         }

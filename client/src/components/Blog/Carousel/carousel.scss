@@ -1,0 +1,110 @@
+@use "../../../sass/breakpoints.scss" as *;
+
+.carousel {
+    margin-bottom: var(--space-5xl);
+
+    &--darkmode {
+        background-color: var(--gray-600);
+        padding: var(--space-4xl);
+    }
+
+    &__wrapper {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 var(--space-3xl);
+        white-space: nowrap;
+        font-size: 0px;
+        position: relative;
+
+        @include breakpoint(tablet) {
+            padding: 0 var(--space-md);
+        }
+    }
+
+    &__title {
+        max-width: 1400px;
+        padding: 0 var(--space-3xl);
+        margin: 0 auto var(--space-2xl);
+
+        @include breakpoint(tablet) {
+            padding: 0 var(--space-md);
+        }
+    }
+
+    &__items {
+        white-space: nowrap;
+        font-size: 0px;
+        display: flex;
+        flex-wrap: nowrap;
+        gap: var(--space-xl);
+        align-items: center;
+        width: 100%;
+        overflow: hidden;
+        scroll-behavior: smooth;
+    }
+
+    &__item {
+        min-width: calc(100% / 3 - 16px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        transition: all ease 0.2s;
+
+        &:hover {
+            transform: translateY(-0.5rem);
+            cursor: pointer;
+        }
+
+        span {
+            height: 450px;
+            width: 100%;
+            object-fit: cover;
+            background-color: var(--gray-700);
+            margin-bottom: var(--space-lg);
+        }
+
+        @include breakpoint(tablet) {
+            min-width: calc(100%);
+        }
+    }
+
+    &__prev {
+        top: calc(50% - 55px);
+        left: 12px;
+
+        @include breakpoint(tablet) {
+            left: 2.5rem;
+        }
+    }
+
+    &__next {
+        top: calc(50% - 55px);
+        right: 12px;
+
+        @include breakpoint(tablet) {
+            right: 2.5rem;
+        }
+    }
+
+    &__prev,
+    &__next {
+        position: absolute;
+        background-color: var(--orange-700);
+        border: none;
+        outline: none;
+        padding: var(--space-xl);
+        border-radius: 100%;
+        transition: all ease 0.3s;
+        z-index: 10;
+
+        &:hover {
+            cursor: pointer;
+            background-color: var(--orange-800);
+        }
+
+        img {
+            width: 28px;
+            height: 28px;
+        }
+    }
+}

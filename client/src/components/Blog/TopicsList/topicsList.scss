@@ -1,0 +1,30 @@
+.topics-list {
+    max-width: 1400px;
+    padding: 0 var(--space-3xl);
+    margin: 0 auto;
+    margin-bottom: var(--space-5xl);
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: var(--space-sm);
+    }
+
+    &__list-item {
+        background-color: var(--gray-200);
+        padding: var(--space-xl);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        font-size: var(--text-xl);
+        color: var(--gray-400);
+        transition: all ease 0.3s;
+
+        &:hover {
+            cursor: pointer;
+            background-color: var(--orange-300);
+            color: var(--orange-700);
+        }
+    }
+}

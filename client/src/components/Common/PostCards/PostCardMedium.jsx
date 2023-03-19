@@ -19,7 +19,7 @@ const PostCardMedium = ({ post }) => {
                 <p className="text-subtle mb-lg">{getPostExerpt(post.body)}</p>
                 <ul className="featured-posts__tag-list">
                     {post.topics.map((topic) => (
-                        <Tag key={topic._id} content="MongoDB" />
+                        <Tag key={topic._id} content={topic.name} />
                     ))}
                 </ul>
             </div>
