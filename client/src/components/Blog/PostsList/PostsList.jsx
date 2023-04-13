@@ -1,12 +1,10 @@
 import React from "react";
 import { PostCardMedium } from "../../../components";
-import { usePostContext } from "../../../hooks/usePostContext";
 import { useTopicContext } from "../../../hooks/useTopicContext";
 
 import "./postsList.scss";
 
-const PostsList = () => {
-    const { posts } = usePostContext();
+const PostsList = ({ posts, setSelectedTopic }) => {
     const { topics } = useTopicContext();
 
     return (
@@ -20,7 +18,7 @@ const PostsList = () => {
                 <ul>
                     {topics &&
                         topics.slice(0, 10).map((topic) => (
-                            <li className="posts-list__topic black text-gray" key={topic._id}>
+                            <li className="posts-list__topic black text-gray" key={topic._id} onClick={() => setSelectedTopic(topic.name)}>
                                 {topic.name}
                             </li>
                         ))}

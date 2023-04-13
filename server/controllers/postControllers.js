@@ -6,7 +6,10 @@ const getAllPosts = async (req, res) => {
 };
 
 const getOnePost = async (req, res) => {
-    res.send({ message: "GET one post" });
+    const { postId } = req.params;
+
+    const post = await postServices.getOnePost(postId);
+    res.status(200).send({ status: "OK", data: post });
 };
 
 const createNewPost = async (req, res) => {

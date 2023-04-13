@@ -28,7 +28,7 @@ const Carousel = ({ title, darkmode }) => {
             } else {
                 return (
                     <span key={index} className={`${darkmode ? "text-white" : ""}`}>
-                        {word}
+                        {`${word} `}
                     </span>
                 );
             }

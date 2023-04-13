@@ -1,6 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import { OverviewPage, LandingPage, PostDetailsPage, PostEditorPage } from "./pages";
+import { OverviewPage, LandingPage, PostDetailsPage, PostEditorPage, SearchResultsPage } from "./pages";
 import { BlogLayout, DashboardLayout } from "./components";
 import { PostProvider } from "./context/PostContext";
 import { TopicProvider } from "./context/TopicContext";
@@ -12,6 +12,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={<BlogLayout />}>
                         <Route index element={<LandingPage />} />
+                        <Route path="search" element={<SearchResultsPage />} />
                         <Route path="post/:id" element={<PostDetailsPage />} />
                     </Route>
 

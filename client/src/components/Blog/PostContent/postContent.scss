@@ -1,0 +1,10 @@
+.post-content {
+    max-width: 60rem;
+    margin: 0 auto;
+    padding: 0 var(--space-3xl);
+    margin-bottom: var(--space-3xl);
+
+    & > h4 {
+        font-size: calc(var(--text-xl) * 1.4);
+    }
+}

@@ -18,9 +18,7 @@ const PostCardMedium = ({ post }) => {
                 <span className="black text-gray mb-sm">January 6, 2023</span>
                 <p className="text-subtle mb-lg">{getPostExerpt(post.body)}</p>
                 <ul className="featured-posts__tag-list">
-                    {post.topics.map((topic) => (
-                        <Tag key={topic._id} content={topic.name} />
-                    ))}
+                    {post.topics && post.topics.map((topic) => <Tag key={topic._id} content={topic.name} />)}
                 </ul>
             </div>
         </Link>

@@ -1,0 +1,32 @@
+.searchbar {
+    background-color: var(--gray-600);
+    margin-bottom: var(--space-4xl);
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+
+    &__input {
+        max-width: 1400px;
+        padding: 0 var(--space-3xl);
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: var(--space-xl);
+
+        input {
+            background-color: var(--gray-700);
+            outline: none;
+            border: none;
+            font-size: var(--text-lg);
+            color: var(--gray-300);
+            padding: var(--space-xs) var(--space-md);
+            border-bottom: 3px solid var(--orange-700);
+            width: 600px;
+
+            &::placeholder {
+                color: var(--gray-500);
+            }
+        }
+    }
+}

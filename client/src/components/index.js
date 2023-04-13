@@ -20,6 +20,9 @@ import TopicsList from "./Blog/TopicsList/TopicsList";
 import FeaturedPosts from "./Blog/FeaturedPosts/FeaturedPosts";
 import PostsList from "./Blog/PostsList/PostsList";
 import TopicSuggestions from "./Blog/TopicSuggestions/TopicSuggestions";
+import Searchbar from "./Blog/Searchbar/Searchbar";
+import PostDetailInfo from "./Blog/PostDetailInfo/PostDetailInfo";
+import PostContent from "./Blog/PostContent/PostContent";
 
 // dashboard components
 import AdminHeader from "./Dashboard/AdminHeader/AdminHeader";
@@ -54,10 +57,13 @@ export {
     Sidebar,
     IconButton,
     TopicsList,
+    Searchbar,
     Button,
     FeaturedPosts,
     PostsOverview,
     TopicSuggestions,
+    PostContent,
+    PostDetailInfo,
     TopicOverview,
     Carousel,
     PostCardMini,
