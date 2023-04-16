@@ -16,6 +16,9 @@ const PostsList = ({ posts, setSelectedTopic }) => {
                     <span className="posts-list__divider-line"></span>
                 </div>
                 <ul>
+                    <li className="posts-list__topic black text-gray" onClick={() => setSelectedTopic("")}>
+                        All
+                    </li>
                     {topics &&
                         topics.slice(0, 10).map((topic) => (
                             <li className="posts-list__topic black text-gray" key={topic._id} onClick={() => setSelectedTopic(topic.name)}>
