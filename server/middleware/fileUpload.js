@@ -5,7 +5,7 @@ const postFilesStorage = multer.diskStorage({
         cb(null, "./public/postFiles");
     },
     filename: (req, file, cb) => {
-        const uniqueSuffix = Date.now() - Math.round(Math.random() * 1e9);
+        const uniqueSuffix = Date.now();
         const fileExtension = file.originalname.split(".").pop();
         const fileNameWithoutExtension = file.originalname.split(".").slice(0, -1).join(".");
 

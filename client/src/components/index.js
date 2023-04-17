@@ -34,6 +34,7 @@ import TopicSelector from "./Dashboard/BuilderTools/TopicSelector";
 import PostWidgets from "./Dashboard/PostWidgets/PostWidgets";
 import SectionDivider from "./Dashboard/SectionDivider/SectionDivider";
 import AddTopicForm from "./Dashboard/AddTopicForm/AddTopicForm";
+import PostFilesGallery from "./Dashboard/PostFilesGallery/PostFilesGallery";
 
 // widgets
 import HeadingWidget from "./Dashboard/PostWidgets/Widgets/HeadingWidget";
@@ -61,6 +62,7 @@ export {
     Button,
     FeaturedPosts,
     PostsOverview,
+    PostFilesGallery,
     TopicSuggestions,
     PostContent,
     PostDetailInfo,

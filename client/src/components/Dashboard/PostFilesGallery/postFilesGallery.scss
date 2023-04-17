@@ -1,0 +1,34 @@
+.post-files-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: var(--space-lg);
+
+    &__files {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: var(--space-md);
+    }
+
+    &__file {
+        border: 1.5px solid transparent;
+        padding: var(--space-2xs);
+        transition: all ease 0.3s;
+
+        &--selected {
+            border: 1.5px solid var(--orange-700);
+        }
+
+        &:hover {
+            cursor: pointer;
+            border: 1.5px solid var(--orange-700);
+        }
+
+        img {
+            pointer-events: none;
+            width: 160px;
+            height: 160px;
+            object-fit: cover;
+        }
+    }
+}
